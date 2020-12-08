@@ -1307,13 +1307,13 @@
           }
         }
       },
-      "Serilog/2.9.0": {
+      "Serilog/2.10.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Serilog.dll": {}
+          "lib/netstandard2.1/Serilog.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Serilog.dll": {}
+          "lib/netstandard2.1/Serilog.dll": {}
         }
       },
       "Serilog.AspNetCore/3.4.0": {
@@ -4936,13 +4936,14 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
-    "Serilog/2.9.0": {
-      "sha512": "QzcrD33A3+CsVvwi1I5CSei67ikQnkGrw7SscgL+vZTghaC2aNYg8fiUcedXHzKJFNjgje9rBjzwYGQTKEaXaA==",
+    "Serilog/2.10.0": {
+      "sha512": "+QX0hmf37a0/OZLxM3wL7V6/ADvC1XihXN4Kq/p6d8lCPfgkRdiuhbWlMaFjR9Av0dy5F0+MBeDmDdRZN/YwQA==",
       "type": "package",
-      "path": "serilog/2.9.0",
+      "path": "serilog/2.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "icon.png",
         "lib/net45/Serilog.dll",
         "lib/net45/Serilog.xml",
         "lib/net46/Serilog.dll",
@@ -4953,7 +4954,9 @@
         "lib/netstandard1.3/Serilog.xml",
         "lib/netstandard2.0/Serilog.dll",
         "lib/netstandard2.0/Serilog.xml",
-        "serilog.2.9.0.nupkg.sha512",
+        "lib/netstandard2.1/Serilog.dll",
+        "lib/netstandard2.1/Serilog.xml",
+        "serilog.2.10.0.nupkg.sha512",
         "serilog.nuspec"
       ]
     },
@@ -9338,6 +9341,7 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 5.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL.Design >= 1.1.0",
+      "Serilog >= 2.10.0",
       "Serilog.AspNetCore >= 3.4.0"
     ]
   },
@@ -9421,6 +9425,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL.Design": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "Serilog": {
+            "target": "Package",
+            "version": "[2.10.0, )"
           },
           "Serilog.AspNetCore": {
             "target": "Package",

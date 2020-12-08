@@ -1,0 +1,175 @@
+2020-12-08 14:37:41.567 +07:00 [INF] Starting web
+2020-12-08 14:37:44.773 +07:00 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-12-08 14:37:45.357 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-08 14:37:45.359 +07:00 [INF] Hosting environment: Development
+2020-12-08 14:37:45.369 +07:00 [INF] Content root path: D:\RepoVS2019\ShopKlee\ShopKlee
+2020-12-08 14:37:45.414 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/  
+2020-12-08 14:37:45.473 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 14:37:45.526 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ShopKlee.Controllers.HomeController (ShopKlee).
+2020-12-08 14:37:45.574 +07:00 [INF] Executing ViewResult, running view Index.
+2020-12-08 14:37:45.775 +07:00 [INF] Executed ViewResult - view Index executed in 229.5547ms.
+2020-12-08 14:37:45.784 +07:00 [INF] Executed action ShopKlee.Controllers.HomeController.Index (ShopKlee) in 256.5547ms
+2020-12-08 14:37:45.785 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 14:37:45.845 +07:00 [INF] Request finished in 437.6726ms 200 text/html; charset=utf-8
+2020-12-08 14:38:06.648 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/Account/Login  
+2020-12-08 14:38:06.659 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 14:38:06.663 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ShopKlee.Controllers.Auth.AccountController (ShopKlee).
+2020-12-08 14:38:07.019 +07:00 [INF] Executing ViewResult, running view ../Auth/LoginView.
+2020-12-08 14:38:07.085 +07:00 [INF] Executed ViewResult - view ../Auth/LoginView executed in 81.9369ms.
+2020-12-08 14:38:07.085 +07:00 [INF] Executed action ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee) in 421.5817ms
+2020-12-08 14:38:07.085 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 14:38:07.089 +07:00 [INF] Request finished in 441.7481ms 200 text/html; charset=utf-8
+2020-12-08 14:38:13.267 +07:00 [INF] Request starting HTTP/2.0 POST https://localhost:44397/Account/Login application/x-www-form-urlencoded 243
+2020-12-08 14:38:13.275 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 14:38:13.327 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ShopKlee.Models.LoginViewModel) on controller ShopKlee.Controllers.Auth.AccountController (ShopKlee).
+2020-12-08 14:38:14.494 +07:00 [INF] Entity Framework Core 5.0.0 initialized 'ShopKleeDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2020-12-08 14:38:15.744 +07:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."Gender", a."IMG_url", a."IsOnline", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2020-12-08 14:38:15.944 +07:00 [WRN] Invalid password for user.
+2020-12-08 14:38:15.946 +07:00 [WRN] User 03feb817-4e58-4bbf-9804-f1db6a2b0172 failed to provide the correct password.
+2020-12-08 14:38:15.949 +07:00 [INF] User was Login Fail at: 08/12/2020 2:38:15 CH
+2020-12-08 14:38:15.953 +07:00 [INF] Executing ViewResult, running view ../Auth/LoginView.
+2020-12-08 14:38:15.958 +07:00 [INF] Executed ViewResult - view ../Auth/LoginView executed in 4.6835ms.
+2020-12-08 14:38:15.960 +07:00 [INF] Executed action ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee) in 2632.6673ms
+2020-12-08 14:38:15.961 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 14:38:15.971 +07:00 [INF] Request finished in 2709.8322ms 200 text/html; charset=utf-8
+2020-12-08 14:38:21.723 +07:00 [INF] Request starting HTTP/2.0 POST https://localhost:44397/Account/Login application/x-www-form-urlencoded 242
+2020-12-08 14:38:21.726 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 14:38:21.728 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ShopKlee.Models.LoginViewModel) on controller ShopKlee.Controllers.Auth.AccountController (ShopKlee).
+2020-12-08 14:38:21.819 +07:00 [INF] Entity Framework Core 5.0.0 initialized 'ShopKleeDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2020-12-08 14:38:21.831 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."Gender", a."IMG_url", a."IsOnline", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2020-12-08 14:38:21.982 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2020-12-08 14:38:22.024 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2020-12-08 14:38:22.038 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-12-08 14:38:22.039 +07:00 [INF] User was Login at: 08/12/2020 2:38:22 CH
+2020-12-08 14:38:22.040 +07:00 [INF] Executing RedirectResult, redirecting to /.
+2020-12-08 14:38:22.041 +07:00 [INF] Executed action ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee) in 311.9675ms
+2020-12-08 14:38:22.041 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 14:38:22.042 +07:00 [INF] Request finished in 319.4975ms 302 
+2020-12-08 14:38:22.054 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/  
+2020-12-08 14:38:22.059 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 14:38:22.059 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ShopKlee.Controllers.HomeController (ShopKlee).
+2020-12-08 14:38:22.060 +07:00 [INF] Executing ViewResult, running view Index.
+2020-12-08 14:38:22.066 +07:00 [INF] Executed ViewResult - view Index executed in 6.5969ms.
+2020-12-08 14:38:22.067 +07:00 [INF] Executed action ShopKlee.Controllers.HomeController.Index (ShopKlee) in 7.1094ms
+2020-12-08 14:38:22.067 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 14:38:22.067 +07:00 [INF] Request finished in 12.88ms 200 text/html; charset=utf-82020-12-08 14:59:58.619 +07:00 [INF] Starting web
+2020-12-08 15:00:01.513 +07:00 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-12-08 15:00:02.385 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-08 15:00:02.394 +07:00 [INF] Hosting environment: Development
+2020-12-08 15:00:02.394 +07:00 [INF] Content root path: D:\RepoVS2019\ShopKlee\ShopKlee
+2020-12-08 15:00:02.485 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/  
+2020-12-08 15:00:02.542 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:00:02.629 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ShopKlee.Controllers.HomeController (ShopKlee).
+2020-12-08 15:00:02.713 +07:00 [INF] Executing ViewResult, running view Index.
+2020-12-08 15:00:02.982 +07:00 [INF] Executed ViewResult - view Index executed in 321.6577ms.
+2020-12-08 15:00:02.985 +07:00 [INF] Executed action ShopKlee.Controllers.HomeController.Index (ShopKlee) in 355.3152ms
+2020-12-08 15:00:02.986 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:00:02.988 +07:00 [INF] HTTP GET / responded 200 in 494.7273 ms
+2020-12-08 15:00:02.998 +07:00 [INF] Request finished in 521.0512ms 200 text/html; charset=utf-8
+2020-12-08 15:00:43.301 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/Account/Login  
+2020-12-08 15:00:43.344 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 15:00:43.370 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller ShopKlee.Controllers.Auth.AccountController (ShopKlee).
+2020-12-08 15:00:43.689 +07:00 [INF] Executing ViewResult, running view ../Auth/LoginView.
+2020-12-08 15:00:43.775 +07:00 [INF] Executed ViewResult - view ../Auth/LoginView executed in 100.1856ms.
+2020-12-08 15:00:43.775 +07:00 [INF] Executed action ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee) in 405.5905ms
+2020-12-08 15:00:43.776 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 15:00:43.776 +07:00 [INF] HTTP GET /Account/Login responded 200 in 474.1257 ms
+2020-12-08 15:00:43.788 +07:00 [INF] Request finished in 489.9446ms 200 text/html; charset=utf-8
+2020-12-08 15:00:58.957 +07:00 [INF] Request starting HTTP/2.0 POST https://localhost:44397/Account/Login application/x-www-form-urlencoded 242
+2020-12-08 15:00:58.965 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 15:00:58.992 +07:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(ShopKlee.Models.LoginViewModel) on controller ShopKlee.Controllers.Auth.AccountController (ShopKlee).
+2020-12-08 15:01:00.227 +07:00 [INF] Entity Framework Core 5.0.0 initialized 'ShopKleeDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2020-12-08 15:01:01.816 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."Address", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."Gender", a."IMG_url", a."IsOnline", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2020-12-08 15:01:02.139 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2020-12-08 15:01:02.178 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2020-12-08 15:01:02.190 +07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-12-08 15:01:02.194 +07:00 [INF] User was Login at: 08/12/2020 3:01:02 CH
+2020-12-08 15:01:02.201 +07:00 [INF] Executing RedirectResult, redirecting to /.
+2020-12-08 15:01:02.204 +07:00 [INF] Executed action ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee) in 3211.5512ms
+2020-12-08 15:01:02.205 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.Auth.AccountController.Login (ShopKlee)'
+2020-12-08 15:01:02.207 +07:00 [INF] HTTP POST /Account/Login responded 302 in 3249.0794 ms
+2020-12-08 15:01:02.214 +07:00 [INF] Request finished in 3259.1834ms 302 
+2020-12-08 15:01:02.229 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/  
+2020-12-08 15:01:02.237 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:01:02.237 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ShopKlee.Controllers.HomeController (ShopKlee).
+2020-12-08 15:01:02.237 +07:00 [INF] Executing ViewResult, running view Index.
+2020-12-08 15:01:02.242 +07:00 [INF] Executed ViewResult - view Index executed in 4.278ms.
+2020-12-08 15:01:02.242 +07:00 [INF] Executed action ShopKlee.Controllers.HomeController.Index (ShopKlee) in 4.7052ms
+2020-12-08 15:01:02.242 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:01:02.242 +07:00 [INF] HTTP GET / responded 200 in 12.5879 ms
+2020-12-08 15:01:02.242 +07:00 [INF] Request finished in 13.0007ms 200 text/html; charset=utf-8
+2020-12-08 15:01:21.507 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/Account/Logout  
+2020-12-08 15:01:21.516 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.Auth.AccountController.Logout (ShopKlee)'
+2020-12-08 15:01:21.539 +07:00 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller ShopKlee.Controllers.Auth.AccountController (ShopKlee).
+2020-12-08 15:01:21.544 +07:00 [INF] User Logout at :08/12/2020 3:01:21 CH
+2020-12-08 15:01:21.560 +07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2020-12-08 15:01:21.587 +07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2020-12-08 15:01:21.588 +07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2020-12-08 15:01:21.589 +07:00 [INF] Executing RedirectResult, redirecting to /.
+2020-12-08 15:01:21.589 +07:00 [INF] Executed action ShopKlee.Controllers.Auth.AccountController.Logout (ShopKlee) in 49.3352ms
+2020-12-08 15:01:21.589 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.Auth.AccountController.Logout (ShopKlee)'
+2020-12-08 15:01:21.589 +07:00 [INF] HTTP GET /Account/Logout responded 302 in 81.5445 ms
+2020-12-08 15:01:21.592 +07:00 [INF] Request finished in 84.8802ms 302 
+2020-12-08 15:01:22.404 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/  
+2020-12-08 15:01:22.405 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:01:22.406 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ShopKlee.Controllers.HomeController (ShopKlee).
+2020-12-08 15:01:22.408 +07:00 [INF] Executing ViewResult, running view Index.
+2020-12-08 15:01:22.412 +07:00 [INF] Executed ViewResult - view Index executed in 4.8084ms.
+2020-12-08 15:01:22.413 +07:00 [INF] Executed action ShopKlee.Controllers.HomeController.Index (ShopKlee) in 5.9348ms
+2020-12-08 15:01:22.417 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:01:22.417 +07:00 [INF] HTTP GET / responded 200 in 12.6614 ms
+2020-12-08 15:01:22.417 +07:00 [INF] Request finished in 13.637ms 200 text/html; charset=utf-8
+2020-12-08 15:06:23.843 +07:00 [INF] Starting web
+2020-12-08 15:06:26.398 +07:00 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-12-08 15:06:27.329 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-08 15:06:27.338 +07:00 [INF] Hosting environment: Development
+2020-12-08 15:06:27.338 +07:00 [INF] Content root path: D:\RepoVS2019\ShopKlee\ShopKlee
+2020-12-08 15:06:27.401 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/  
+2020-12-08 15:06:27.474 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:06:27.525 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ShopKlee.Controllers.HomeController (ShopKlee).
+2020-12-08 15:06:27.579 +07:00 [INF] Executing ViewResult, running view Index.
+2020-12-08 15:06:27.797 +07:00 [INF] Executed ViewResult - view Index executed in 253.0555ms.
+2020-12-08 15:06:28.745 +07:00 [INF] Executed action ShopKlee.Controllers.HomeController.Index (ShopKlee) in 1219.6798ms
+2020-12-08 15:06:28.747 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:06:28.751 +07:00 [INF] HTTP GET / responded 200 in 1336.5057 ms
+2020-12-08 15:06:28.759 +07:00 [INF] Request finished in 1362.9234ms 200 text/html; charset=utf-8
+2020-12-08 15:14:17.773 +07:00 [INF] Starting web
+2020-12-08 15:14:22.492 +07:00 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-12-08 15:14:23.332 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-12-08 15:14:23.333 +07:00 [INF] Hosting environment: Development
+2020-12-08 15:14:23.333 +07:00 [INF] Content root path: D:\RepoVS2019\ShopKlee\ShopKlee
+2020-12-08 15:14:23.393 +07:00 [INF] Request starting HTTP/2.0 GET https://localhost:44397/  
+2020-12-08 15:14:23.452 +07:00 [INF] Executing endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:14:23.507 +07:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ShopKlee.Controllers.HomeController (ShopKlee).
+2020-12-08 15:14:23.555 +07:00 [INF] Executing ViewResult, running view Index.
+2020-12-08 15:14:23.735 +07:00 [INF] Executed ViewResult - view Index executed in 210.3093ms.
+2020-12-08 15:14:23.955 +07:00 [INF] Executed action ShopKlee.Controllers.HomeController.Index (ShopKlee) in 447.8266ms
+2020-12-08 15:14:23.957 +07:00 [INF] Executed endpoint 'ShopKlee.Controllers.HomeController.Index (ShopKlee)'
+2020-12-08 15:14:23.960 +07:00 [INF] HTTP GET / responded 200 in 559.5432 ms
+2020-12-08 15:14:23.967 +07:00 [INF] Request finished in 578.7396ms 200 text/html; charset=utf-8

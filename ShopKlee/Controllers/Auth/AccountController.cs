@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Serilog;
 using ShopKlee.Controllers.DBContext;
 using ShopKlee.Models;
 using ShopKlee.Models.ViewModel;
@@ -20,14 +22,19 @@ namespace ShopKlee.Controllers.Auth
         private readonly UserManager<InfoUserModel> userManager;
         private readonly SignInManager<InfoUserModel> signInManager;
         private readonly IHostingEnvironment _hostingEnvironment;
-        public AccountController(UserManager<InfoUserModel> userManager,SignInManager<InfoUserModel> signInManager, IHostingEnvironment hostingEnvironment)
+        readonly IDiagnosticContext _diagnosticContext;
+        private readonly ILogger<AccountController> _logger;
+        public AccountController(UserManager<InfoUserModel> userManager,SignInManager<InfoUserModel> signInManager, IHostingEnvironment hostingEnvironment, IDiagnosticContext diagnosticContext,ILogger<AccountController> logger)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this._hostingEnvironment = hostingEnvironment;
+            this._diagnosticContext = diagnosticContext;
+            this._logger = logger;
         }
         public async Task<IActionResult> Logout()
         {
+            _logger.LogInformation("User Logout at :" + DateTime.Now.ToString());
             await signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
         }
@@ -49,9 +56,10 @@ namespace ShopKlee.Controllers.Auth
                 var result = await signInManager.PasswordSignInAsync(model.UserName, model.Password, model.Rememberme, false);
                 if (result.Succeeded)
                 {
-
+                    _logger.LogInformation("User was Login at: " + DateTime.Now.ToString());
                     return RedirectToAction("index", "home");
                 }
+                _logger.LogInformation("User was Login Fail at: " + DateTime.Now.ToString());
                 ModelState.AddModelError("", "Invalid Login Attempt!");
             }
             return View("../Auth/LoginView",model);

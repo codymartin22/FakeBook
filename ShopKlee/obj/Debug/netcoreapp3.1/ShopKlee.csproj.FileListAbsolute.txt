@@ -431,3 +431,15 @@ D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCo
 D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
 D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
 D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\libman.json
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+D:\RepoVS2019\ShopKlee\ShopKlee\obj\Debug\netcoreapp3.1\ShopKlee.csproj.CoreCompileInputs.cache
+D:\RepoVS2019\ShopKlee\ShopKlee\obj\Debug\netcoreapp3.1\ShopKlee.MvcApplicationPartsAssemblyInfo.cs
+D:\RepoVS2019\ShopKlee\ShopKlee\obj\Debug\netcoreapp3.1\ShopKlee.MvcApplicationPartsAssemblyInfo.cache
