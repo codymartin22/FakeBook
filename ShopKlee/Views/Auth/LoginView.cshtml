@@ -1,0 +1,50 @@
+﻿@model ShopKlee.Models.LoginViewModel
+@{
+    ViewData["Title"] = "LoginView";
+}
+<div class="panel-header panel-header-sm">
+    <!--null-->
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h5 class="title">Login System</h5>
+                </div>
+                <div class="card-body">
+                    <form asp-controller="Account" asp-action="Login" method="post">
+                        <div asp-validation-summary="All" class="row text-danger"></div>
+                        <div class="col-md-12 form-group">
+                            <label asp-for="UserName" class="control-label"></label>
+                            <input asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input type="password" asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12 form-group text-center">
+                            <input asp-for="Rememberme" type="checkbox" />
+                            <label asp-for="Rememberme" class="control-label">Remember me</label>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <button class="col-md-12 btn btn-round btn-primary btn-block" type="submit">Login</button>
+                            </div>
+                            <div class="row">
+                                <a class="text-center col-md-6 tn btn-info btn-round btn-icon btn-lg"><i class="fab fa-facebook-f"></i></a>
+                                <a class="text-center col-md-6 tn btn-success btn-round btn-lg"><i class="fab fa-google-plus-g"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

@@ -1,0 +1,23 @@
+﻿<div class="col-md-4">
+    <div class="row">
+        <div class="card card-user">
+            <div class="title text-center">Có @ViewBag.Data.totalResults kết quả, 10/@ViewBag.Data.totalResults kết quả:</div>
+        </div>
+    </div>
+    @foreach (var items in ViewBag.Data.articles){
+    <div class="row">
+        <a href ="@items.url">
+            <div class="card card-user">
+                <div class="image">
+                    <img src="@items.urlToImage" alt="...">
+                </div>
+                <div class="card-body">
+                    <p class="description text-center">
+                        @items.description
+                    </p>
+                </div>
+            </div>
+        </a>
+    </div>
+    }
+</div>

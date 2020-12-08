@@ -1,0 +1,137 @@
+﻿@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FakeBook</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/now-ui-dashboard.css" rel="stylesheet" />
+    <link href="~/demo/demo.css" rel="stylesheet" />
+    <namespaces>
+        <add namespace="PagedList.Mvc" />
+    </namespaces>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper ">
+            <div class="sidebar" data-color="blue">
+                <div class="logo">
+                    <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                        CT
+                    </a>
+                    <a class="simple-text logo-normal" asp-area="" asp-controller="Home" asp-action="Index">FakeBook</a>
+                </div>
+                <div class="sidebar-wrapper" id="sidebar-wrapper">
+                    <ul class="nav">
+                        <li class="active ">
+                            <a asp-area="" asp-controller="Home" asp-action="Index">
+                                <i class="now-ui-icons design_app"></i>
+                                <p>TRANG CHỦ</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">
+                                <i class="now-ui-icons design_bullet-list-67"></i>
+                                <p>My DashBoard</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Home" asp-action="Index">
+                                <i class="now-ui-icons ui-1_zoom-bold"></i>
+                                <p>Search</p>
+                            </a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Index">
+                                    <i class="now-ui-icons ui-2_time-alarm"></i>
+                                    <p>Friend</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-area="" asp-controller="Home" asp-action="Index">
+                                    <i class="now-ui-icons shopping_basket"></i>
+                                    <p>Messenger</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-controller="Account" asp-action="EditProfile" asp-route-Id="@User.FindFirst(ClaimTypes.NameIdentifier).Value">
+                                    <i class="now-ui-icons users_circle-08"></i>
+                                    Edit Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-controller="Account" asp-action="Logout">
+                                    <i class="now-ui-icons objects_spaceship"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a asp-controller="Account" asp-action="Login">
+                                    <i class="now-ui-icons arrows-1_cloud-upload-94"></i>
+                                    Login
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-controller="Account" asp-action="Register">
+                                    <i class="now-ui-icons design-2_ruler-pencil"></i>
+                                    Register
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="main-panel" id="main-panel">
+                <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-toggle">
+                                <button type="button" class="navbar-toggler">
+                                    <span class="navbar-toggler-bar bar1"></span>
+                                    <span class="navbar-toggler-bar bar2"></span>
+                                    <span class="navbar-toggler-bar bar3"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                    @RenderBody()
+            </div>
+    </header>
+    <footer class="footer">
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", required: true)
+    }
+
+</body>
+</html>
+<script src="~/js/core/jquery.min.js"></script>
+<script src="~/js/core/popper.min.js"></script>
+<script src="~/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="~/js/core/bootstrap.min.js"></script>
+<script src="~/js/plugins/chartjs.min.js"></script>
+<script src="~/js/plugins/bootstrap-notify.js"></script>
+<script src="~/js/now-ui-dashboard.js" type="text/javascript"></script>
+<script src="~/demo/demo.js"></script>
