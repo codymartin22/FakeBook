@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +34,7 @@ namespace ShopKlee
             services.AddDbContext<ShopKleeDBContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("FakeBookConn")));
             services.AddControllersWithViews();
             services.AddIdentity<InfoUserModel, IdentityRole>().AddEntityFrameworkStores<ShopKleeDBContext>();
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

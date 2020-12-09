@@ -62,7 +62,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a asp-area="" asp-controller="Home" asp-action="Index">
+                                <a asp-area="" asp-controller="AllUserViewModels" asp-route-Id="@User.FindFirst(ClaimTypes.NameIdentifier).Value" asp-action="Index">
                                     <i class="now-ui-icons shopping_basket"></i>
                                     <p>Messenger</p>
                                 </a>
@@ -114,6 +114,7 @@
                 </nav>
                     @RenderBody()
             </div>
+        </div>
     </header>
     <footer class="footer">
     </footer>

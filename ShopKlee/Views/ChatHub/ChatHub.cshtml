@@ -1,0 +1,89 @@
+﻿@model ShopKlee.Models.ViewModel.ChatHubViewModel;
+@using System.Security.Claims
+@{
+}
+<div class="panel-header panel-header-sm">
+</div>
+<div class="content">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title text-center">Friends</h4>
+                </div>
+                <div class="card-body border">
+                    <div class="row">
+                        @foreach (var item in Model.shortUsers)
+                        {
+                            <div hidden="hidden">@item.id</div>
+                            <div class="col-md-4">
+                                <img class="avatar" src="~/img/UserIMG/@item.urlIMG">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="">@item.Username</div>
+                            </div>
+                            <div class="col-md-2">
+                                <button asp-action="AddFriend" asp-controller="AllUserViewModels" asp-route-idU="@item.id" asp-route-idF="@User.FindFirst(ClaimTypes.NameIdentifier).Value"><i class="now-ui-icons ui-1_simple-add"></i></button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center card-title">Chat Message</h4>
+                </div>
+                <div class="card-body align-middle">
+                    <div class="rounded-sm alert alert-success">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span>This is a regular notification made with ".alert-primary"</span>
+                                </div>
+                                <div class="row">
+                                    <small>09-10-2020 20 : 20</small>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <img class="avatar" src="D://abc.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-sm alert alert-primary">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="avatar" src="D://abc.png">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <span>This is a regular notification made with ".alert-primary"</span>
+                                </div>
+                                <div class="row">
+                                    <small>09-10-2020 20 : 20</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <input hidden="hidden" value="from-name" type="text" name="fromid">
+                                    <input class="form-control" type="text" name="msg" />
+                                    <input hidden="hidden" value="to-name" type="text" name="toid">
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <button class="form-control" type="submit">
+                                        Send <i class="now-ui-icons ui-1_send"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
